@@ -7,18 +7,87 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E49DB8C7168ECF6100C01EA9 /* zutil.h in Headers */ = {isa = PBXBuildFile; fileRef = E49DB8C6168ECF6100C01EA9 /* zutil.h */; };
+		E4C29313168FF9E10099CF80 /* ztool.c in Sources */ = {isa = PBXBuildFile; fileRef = E4C292C2168FF2770099CF80 /* ztool.c */; };
+		E4C2931B168FFC5A0099CF80 /* adler32.c in Sources */ = {isa = PBXBuildFile; fileRef = E4EED2FC168E870300BF1456 /* adler32.c */; };
+		E4C2931C168FFC5A0099CF80 /* zutil.c in Sources */ = {isa = PBXBuildFile; fileRef = E4EED2EF168E807B00BF1456 /* zutil.c */; };
+		E4C2931D168FFC5A0099CF80 /* zync.c in Sources */ = {isa = PBXBuildFile; fileRef = E4C46AD7168AA54800CE71BB /* zync.c */; };
+		E4C2931E168FFDAC0099CF80 /* ztool.h in Headers */ = {isa = PBXBuildFile; fileRef = E4C292C1168FF2690099CF80 /* ztool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4C29320169014AC0099CF80 /* test_image_server.png.zync in Resources */ = {isa = PBXBuildFile; fileRef = E4C2931F169014AC0099CF80 /* test_image_server.png.zync */; };
+		E4C29321169028200099CF80 /* zutil.h in Headers */ = {isa = PBXBuildFile; fileRef = E49DB8C6168ECF6100C01EA9 /* zutil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4C29322169028200099CF80 /* zync.h in Headers */ = {isa = PBXBuildFile; fileRef = E4C46AD5168AA53900CE71BB /* zync.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E4C46A90168A984600CE71BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C46A8F168A984600CE71BB /* Foundation.framework */; };
 		E4C46A96168A984600CE71BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E4C46A94168A984600CE71BB /* InfoPlist.strings */; };
+		E4C46AA8168A992100CE71BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C46AA7168A992100CE71BB /* UIKit.framework */; };
+		E4C46AA9168A992100CE71BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C46A8F168A984600CE71BB /* Foundation.framework */; };
+		E4C46AAB168A992100CE71BB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C46AAA168A992100CE71BB /* CoreGraphics.framework */; };
+		E4C46AB1168A992100CE71BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E4C46AAF168A992100CE71BB /* InfoPlist.strings */; };
+		E4C46AB3168A992100CE71BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C46AB2168A992100CE71BB /* main.m */; };
+		E4C46AB9168A992100CE71BB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E4C46AB8168A992100CE71BB /* Default.png */; };
+		E4C46ABB168A992100CE71BB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4C46ABA168A992100CE71BB /* Default@2x.png */; };
+		E4C46ABD168A992100CE71BB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4C46ABC168A992100CE71BB /* Default-568h@2x.png */; };
+		E4C46AC9168A996700CE71BB /* GHUnitIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C46AC8168A996700CE71BB /* GHUnitIOS.framework */; };
+		E4C46ACC168A9A6A00CE71BB /* TestZync.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C46ACB168A9A6A00CE71BB /* TestZync.m */; };
+		E4C46AD6168AA53900CE71BB /* zync.h in Headers */ = {isa = PBXBuildFile; fileRef = E4C46AD5168AA53900CE71BB /* zync.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4C46AD8168AA54800CE71BB /* zync.c in Sources */ = {isa = PBXBuildFile; fileRef = E4C46AD7168AA54800CE71BB /* zync.c */; };
+		E4C46AD9168AA54800CE71BB /* zync.c in Sources */ = {isa = PBXBuildFile; fileRef = E4C46AD7168AA54800CE71BB /* zync.c */; };
+		E4C46ADD168BBABD00CE71BB /* test_image_client.png in Resources */ = {isa = PBXBuildFile; fileRef = E4C46ADB168BBABD00CE71BB /* test_image_client.png */; };
+		E4C46ADE168BBABD00CE71BB /* test_image_client.png in Resources */ = {isa = PBXBuildFile; fileRef = E4C46ADB168BBABD00CE71BB /* test_image_client.png */; };
+		E4C46ADF168BBABD00CE71BB /* test_image_server.png in Resources */ = {isa = PBXBuildFile; fileRef = E4C46ADC168BBABD00CE71BB /* test_image_server.png */; };
+		E4C46AE0168BBABD00CE71BB /* test_image_server.png in Resources */ = {isa = PBXBuildFile; fileRef = E4C46ADC168BBABD00CE71BB /* test_image_server.png */; };
+		E4C46AE7168BBE9F00CE71BB /* mongoose.c in Sources */ = {isa = PBXBuildFile; fileRef = E4C46AE5168BBE9F00CE71BB /* mongoose.c */; };
+		E4C46AE8168BBE9F00CE71BB /* mongoose.c in Sources */ = {isa = PBXBuildFile; fileRef = E4C46AE5168BBE9F00CE71BB /* mongoose.c */; };
+		E4C46AE9168BBE9F00CE71BB /* mongoose.h in Headers */ = {isa = PBXBuildFile; fileRef = E4C46AE6168BBE9F00CE71BB /* mongoose.h */; };
+		E4EED2F0168E807B00BF1456 /* zutil.c in Sources */ = {isa = PBXBuildFile; fileRef = E4EED2EF168E807B00BF1456 /* zutil.c */; };
+		E4EED2F1168E807B00BF1456 /* zutil.c in Sources */ = {isa = PBXBuildFile; fileRef = E4EED2EF168E807B00BF1456 /* zutil.c */; };
+		E4EED2FD168E870300BF1456 /* adler32.c in Sources */ = {isa = PBXBuildFile; fileRef = E4EED2FC168E870300BF1456 /* adler32.c */; };
+		E4EED2FE168E870300BF1456 /* adler32.c in Sources */ = {isa = PBXBuildFile; fileRef = E4EED2FC168E870300BF1456 /* adler32.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E49DB8C6168ECF6100C01EA9 /* zutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zutil.h; sourceTree = "<group>"; };
+		E4C292AA168FE56C0099CF80 /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk/System/Library/Frameworks/Python.framework; sourceTree = DEVELOPER_DIR; };
+		E4C292C1168FF2690099CF80 /* ztool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ztool.h; sourceTree = "<group>"; };
+		E4C292C2168FF2770099CF80 /* ztool.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ztool.c; sourceTree = "<group>"; };
+		E4C292DB168FF58C0099CF80 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		E4C292DC168FF58C0099CF80 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E4C292DD168FF58C0099CF80 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E4C2930F168FF92F0099CF80 /* libztool.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libztool.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4C2931F169014AC0099CF80 /* test_image_server.png.zync */ = {isa = PBXFileReference; lastKnownFileType = file; name = test_image_server.png.zync; path = test_files/test_image_server.png.zync; sourceTree = "<group>"; };
 		E4C46A8F168A984600CE71BB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E4C46A93168A984600CE71BB /* zync-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "zync-Info.plist"; sourceTree = "<group>"; };
 		E4C46A95168A984600CE71BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E4C46A97168A984600CE71BB /* zync-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "zync-Prefix.pch"; sourceTree = "<group>"; };
+		E4C46AA4168A992100CE71BB /* Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4C46AA7168A992100CE71BB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E4C46AAA168A992100CE71BB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E4C46AAE168A992100CE71BB /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		E4C46AB0168A992100CE71BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E4C46AB2168A992100CE71BB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E4C46AB4168A992100CE71BB /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		E4C46AB8168A992100CE71BB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		E4C46ABA168A992100CE71BB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		E4C46ABC168A992100CE71BB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E4C46AC8168A996700CE71BB /* GHUnitIOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GHUnitIOS.framework; path = ../GHUnit/GHUnitIOS.framework; sourceTree = "<group>"; };
+		E4C46ACB168A9A6A00CE71BB /* TestZync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestZync.m; sourceTree = "<group>"; };
+		E4C46AD5168AA53900CE71BB /* zync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zync.h; sourceTree = "<group>"; };
+		E4C46AD7168AA54800CE71BB /* zync.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zync.c; sourceTree = "<group>"; };
+		E4C46ADB168BBABD00CE71BB /* test_image_client.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test_image_client.png; path = test_files/test_image_client.png; sourceTree = "<group>"; };
+		E4C46ADC168BBABD00CE71BB /* test_image_server.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test_image_server.png; path = test_files/test_image_server.png; sourceTree = "<group>"; };
+		E4C46AE5168BBE9F00CE71BB /* mongoose.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mongoose.c; path = test_files/mongoose.c; sourceTree = "<group>"; };
+		E4C46AE6168BBE9F00CE71BB /* mongoose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mongoose.h; path = test_files/mongoose.h; sourceTree = "<group>"; };
+		E4EED2EF168E807B00BF1456 /* zutil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zutil.c; sourceTree = "<group>"; };
+		E4EED2FC168E870300BF1456 /* adler32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = adler32.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E4C2930C168FF92F0099CF80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E4C46A88168A984600CE71BB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -27,21 +96,74 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E4C46AA1168A992100CE71BB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4C46AC9168A996700CE71BB /* GHUnitIOS.framework in Frameworks */,
+				E4C46AA8168A992100CE71BB /* UIKit.framework in Frameworks */,
+				E4C46AA9168A992100CE71BB /* Foundation.framework in Frameworks */,
+				E4C46AAB168A992100CE71BB /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E49DB8D4168FE3AD00C01EA9 /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				E49DB8D6168FE3BB00C01EA9 /* includes */,
+				E49DB8D5168FE3B500C01EA9 /* impl */,
+			);
+			name = tool;
+			sourceTree = "<group>";
+		};
+		E49DB8D5168FE3B500C01EA9 /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				E4C292C2168FF2770099CF80 /* ztool.c */,
+			);
+			name = impl;
+			sourceTree = "<group>";
+		};
+		E49DB8D6168FE3BB00C01EA9 /* includes */ = {
+			isa = PBXGroup;
+			children = (
+				E4C292C1168FF2690099CF80 /* ztool.h */,
+			);
+			name = includes;
+			sourceTree = "<group>";
+		};
+		E4C292DA168FF58C0099CF80 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4C292DB168FF58C0099CF80 /* AppKit.framework */,
+				E4C292DC168FF58C0099CF80 /* CoreData.framework */,
+				E4C292DD168FF58C0099CF80 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
 		E4C46A7F168A984600CE71BB = {
 			isa = PBXGroup;
 			children = (
 				E4C46A91168A984600CE71BB /* zync */,
+				E4C46AAC168A992100CE71BB /* Tests */,
 				E4C46A8E168A984600CE71BB /* Frameworks */,
+				E4C46AA5168A992100CE71BB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
 		E4C46A8E168A984600CE71BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E4C292AA168FE56C0099CF80 /* Python.framework */,
+				E4C46AC8168A996700CE71BB /* GHUnitIOS.framework */,
 				E4C46A8F168A984600CE71BB /* Foundation.framework */,
+				E4C46AA7168A992100CE71BB /* UIKit.framework */,
+				E4C46AAA168A992100CE71BB /* CoreGraphics.framework */,
+				E4C292DA168FF58C0099CF80 /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -49,6 +171,10 @@
 		E4C46A91168A984600CE71BB /* zync */ = {
 			isa = PBXGroup;
 			children = (
+				E49DB8D4168FE3AD00C01EA9 /* tool */,
+				E4EED2FB168E86F500BF1456 /* opensource */,
+				E4EED2E8168E7E5500BF1456 /* util */,
+				E4C46ACD168A9B5800CE71BB /* core */,
 				E4C46A92168A984600CE71BB /* Supporting Files */,
 			);
 			path = zync;
@@ -64,19 +190,160 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E4C46AA5168A992100CE71BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4C46AA4168A992100CE71BB /* Tests.app */,
+				E4C2930F168FF92F0099CF80 /* libztool.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E4C46AAC168A992100CE71BB /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E4C46AAD168A992100CE71BB /* Supporting Files */,
+				E4C46ACB168A9A6A00CE71BB /* TestZync.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		E4C46AAD168A992100CE71BB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E4C46ADB168BBABD00CE71BB /* test_image_client.png */,
+				E4C46AE4168BBE5100CE71BB /* http_server */,
+				E4C46ADA168B91E600CE71BB /* test_files */,
+				E4C46AAE168A992100CE71BB /* Tests-Info.plist */,
+				E4C46AAF168A992100CE71BB /* InfoPlist.strings */,
+				E4C46AB2168A992100CE71BB /* main.m */,
+				E4C46AB4168A992100CE71BB /* Tests-Prefix.pch */,
+				E4C46AB8168A992100CE71BB /* Default.png */,
+				E4C46ABA168A992100CE71BB /* Default@2x.png */,
+				E4C46ABC168A992100CE71BB /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E4C46ACD168A9B5800CE71BB /* core */ = {
+			isa = PBXGroup;
+			children = (
+				E4C46ACF168A9B6B00CE71BB /* impl */,
+				E4C46ACE168A9B6500CE71BB /* includes */,
+			);
+			name = core;
+			sourceTree = "<group>";
+		};
+		E4C46ACE168A9B6500CE71BB /* includes */ = {
+			isa = PBXGroup;
+			children = (
+				E4C46AD5168AA53900CE71BB /* zync.h */,
+			);
+			name = includes;
+			sourceTree = "<group>";
+		};
+		E4C46ACF168A9B6B00CE71BB /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				E4C46AD7168AA54800CE71BB /* zync.c */,
+			);
+			name = impl;
+			sourceTree = "<group>";
+		};
+		E4C46ADA168B91E600CE71BB /* test_files */ = {
+			isa = PBXGroup;
+			children = (
+				E4C2931F169014AC0099CF80 /* test_image_server.png.zync */,
+				E4C46ADC168BBABD00CE71BB /* test_image_server.png */,
+			);
+			name = test_files;
+			sourceTree = "<group>";
+		};
+		E4C46AE4168BBE5100CE71BB /* http_server */ = {
+			isa = PBXGroup;
+			children = (
+				E4C46AE5168BBE9F00CE71BB /* mongoose.c */,
+				E4C46AE6168BBE9F00CE71BB /* mongoose.h */,
+			);
+			name = http_server;
+			sourceTree = "<group>";
+		};
+		E4EED2E8168E7E5500BF1456 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				E4EED2EA168E7E5D00BF1456 /* impl */,
+				E4EED2EB168E7E6200BF1456 /* includes */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
+		E4EED2EA168E7E5D00BF1456 /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				E4EED2EF168E807B00BF1456 /* zutil.c */,
+			);
+			name = impl;
+			sourceTree = "<group>";
+		};
+		E4EED2EB168E7E6200BF1456 /* includes */ = {
+			isa = PBXGroup;
+			children = (
+				E49DB8C6168ECF6100C01EA9 /* zutil.h */,
+			);
+			name = includes;
+			sourceTree = "<group>";
+		};
+		E4EED2FB168E86F500BF1456 /* opensource */ = {
+			isa = PBXGroup;
+			children = (
+				E4EED2FC168E870300BF1456 /* adler32.c */,
+			);
+			name = opensource;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		E4C2930D168FF92F0099CF80 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4C2931E168FFDAC0099CF80 /* ztool.h in Headers */,
+				E4C29321169028200099CF80 /* zutil.h in Headers */,
+				E4C29322169028200099CF80 /* zync.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E4C46A89168A984600CE71BB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4C46AD6168AA53900CE71BB /* zync.h in Headers */,
+				E4C46AE9168BBE9F00CE71BB /* mongoose.h in Headers */,
+				E49DB8C7168ECF6100C01EA9 /* zutil.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		E4C2930E168FF92F0099CF80 /* ztool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4C29310168FF92F0099CF80 /* Build configuration list for PBXNativeTarget "ztool" */;
+			buildPhases = (
+				E4C2930B168FF92F0099CF80 /* Sources */,
+				E4C2930C168FF92F0099CF80 /* Frameworks */,
+				E4C2930D168FF92F0099CF80 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ztool;
+			productName = ztool;
+			productReference = E4C2930F168FF92F0099CF80 /* libztool.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
 		E4C46A8D168A984600CE71BB /* zync */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E4C46A9A168A984600CE71BB /* Build configuration list for PBXNativeTarget "zync" */;
@@ -97,6 +364,23 @@
 			productName = zync;
 			productType = "com.apple.product-type.framework.static";
 		};
+		E4C46AA3168A992100CE71BB /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4C46AC6168A992100CE71BB /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				E4C46AA0168A992100CE71BB /* Sources */,
+				E4C46AA1168A992100CE71BB /* Frameworks */,
+				E4C46AA2168A992100CE71BB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = E4C46AA4168A992100CE71BB /* Tests.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -114,10 +398,13 @@
 				en,
 			);
 			mainGroup = E4C46A7F168A984600CE71BB;
+			productRefGroup = E4C46AA5168A992100CE71BB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				E4C46A8D168A984600CE71BB /* zync */,
+				E4C46AA3168A992100CE71BB /* Tests */,
+				E4C2930E168FF92F0099CF80 /* ztool */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +415,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4C46A96168A984600CE71BB /* InfoPlist.strings in Resources */,
+				E4C46ADD168BBABD00CE71BB /* test_image_client.png in Resources */,
+				E4C46ADF168BBABD00CE71BB /* test_image_server.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4C46AA2168A992100CE71BB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4C46AB1168A992100CE71BB /* InfoPlist.strings in Resources */,
+				E4C46AB9168A992100CE71BB /* Default.png in Resources */,
+				E4C46ABB168A992100CE71BB /* Default@2x.png in Resources */,
+				E4C46ABD168A992100CE71BB /* Default-568h@2x.png in Resources */,
+				E4C46ADE168BBABD00CE71BB /* test_image_client.png in Resources */,
+				E4C46AE0168BBABD00CE71BB /* test_image_server.png in Resources */,
+				E4C29320169014AC0099CF80 /* test_image_server.png.zync in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,10 +479,38 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E4C2930B168FF92F0099CF80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4C2931B168FFC5A0099CF80 /* adler32.c in Sources */,
+				E4C2931C168FFC5A0099CF80 /* zutil.c in Sources */,
+				E4C2931D168FFC5A0099CF80 /* zync.c in Sources */,
+				E4C29313168FF9E10099CF80 /* ztool.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E4C46A87168A984600CE71BB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4C46AD8168AA54800CE71BB /* zync.c in Sources */,
+				E4C46AE7168BBE9F00CE71BB /* mongoose.c in Sources */,
+				E4EED2F0168E807B00BF1456 /* zutil.c in Sources */,
+				E4EED2FD168E870300BF1456 /* adler32.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4C46AA0168A992100CE71BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4C46AB3168A992100CE71BB /* main.m in Sources */,
+				E4C46ACC168A9A6A00CE71BB /* TestZync.m in Sources */,
+				E4C46AD9168AA54800CE71BB /* zync.c in Sources */,
+				E4C46AE8168BBE9F00CE71BB /* mongoose.c in Sources */,
+				E4EED2F1168E807B00BF1456 /* zutil.c in Sources */,
+				E4EED2FE168E870300BF1456 /* adler32.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,9 +525,44 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
+		E4C46AAF168A992100CE71BB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E4C46AB0168A992100CE71BB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E4C29311168FF92F0099CF80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E4C29312168FF92F0099CF80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXECUTABLE_PREFIX = lib;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		E4C46A98168A984600CE71BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -257,6 +623,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "zync/zync-Prefix.pch";
 				INFOPLIST_FILE = "zync/zync-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/usr/lib/system\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
@@ -276,15 +646,68 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "zync/zync-Prefix.pch";
 				INFOPLIST_FILE = "zync/zync-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)/usr/lib/system\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
 		};
+		E4C46AC4168A992100CE71BB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../GHUnit\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E4C46AC5168A992100CE71BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../GHUnit\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E4C29310168FF92F0099CF80 /* Build configuration list for PBXNativeTarget "ztool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4C29311168FF92F0099CF80 /* Debug */,
+				E4C29312168FF92F0099CF80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		E4C46A84168A984600CE71BB /* Build configuration list for PBXProject "zync" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -301,6 +724,16 @@
 				E4C46A9C168A984600CE71BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4C46AC6168A992100CE71BB /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4C46AC4168A992100CE71BB /* Debug */,
+				E4C46AC5168A992100CE71BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
