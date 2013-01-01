@@ -104,7 +104,7 @@
     fclose(file);
 }
 
-- (void) test_generate_unfilled_zync_state
+- (void) test_generate_unfilled_zync_state_by_rsum
 {
     NSString *nssourcefile_url = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"test_image_server.png"];
     const char *sourcefile_url = [nssourcefile_url cStringUsingEncoding:NSASCIIStringEncoding];
@@ -137,10 +137,9 @@
     zs->start_block->block_fill_flag = 1;
     zs->block_fill_count++;
     
-    struct zync_state *unfilled_zs = generate_unfilled_zync_state(zs);
-    int unfilled_block_count = count_zync_blocks(unfilled_zs);
+    struct zync_block *unfilled_zb = find_unfilled_zync_block_by_rsum(zs, zs->start_block->rsum);
     
-    GHAssertTrue(unfilled_block_count == blocks - 1, NULL);
+    GHAssertTrue(unfilled_zb == NULL, NULL);
     
     free(zs);
     fclose(file);
@@ -227,7 +226,7 @@
         }
         unsigned char *buf = calloc(zs->block_size, 1);
         fread(buf, zs->block_size, 1, in_file);
-        if (update_download_file(download_file, buf, write_block_index) == -1)
+        if (update_download_file(download_file, buf, zs, write_block_index) == -1)
         {
             free(buf);
             free(zs);
@@ -248,6 +247,8 @@
     GHAssertTrue(read_success == 0, NULL);
     
     GHAssertTrue(zs2->block_fill_count == block_count, NULL);
+    
+    fclose(download_file);
     
 }
 
@@ -287,7 +288,7 @@
         }
         unsigned char *buf = calloc(zs->block_size, 1);
         fread(buf, zs->block_size, 1, in_file);
-        if (update_download_file(download_file, buf, write_block_index) == -1)
+        if (update_download_file(download_file, buf, zs, write_block_index) == -1)
         {
             free(buf);
             free(zs);
@@ -350,6 +351,92 @@
     fclose(finalized_file);
     fclose(download_file);
 
+}
+
+- (void) test_zync_txt_file
+{
+    NSString *nssourcefile_url = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"test_txt_file.txt"];
+    const char *sourcefile_url = [nssourcefile_url cStringUsingEncoding:NSASCIIStringEncoding];
+    FILE *in_file = fopen(sourcefile_url, "r");
+    
+    NSString *nsdownloadfile_url = [[[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] objectAtIndex:0] URLByAppendingPathComponent:@"test_txt_file.txt.download"] path];
+    const char *downloadfile_url = [nsdownloadfile_url cStringUsingEncoding:NSASCIIStringEncoding];
+    FILE *download_file = fopen(downloadfile_url, "w");
+    
+    struct zync_state *zs = init_zync_state(0, 0, 0, NULL);
+    int generate_success = generate_zync_state(in_file, zs, 2);
+    GHAssertTrue(generate_success == 0, NULL);
+    
+    int write_success = init_download_file(download_file, zs);
+    GHAssertTrue(write_success == 0, NULL);
+    
+    fclose(in_file);
+    fflush(download_file);
+    fclose(download_file);
+    
+    in_file = fopen(sourcefile_url, "r");
+    download_file = fopen(downloadfile_url, "r+");
+    
+    int zync_original_file_status = zync_original_file(in_file, download_file, zs->filelen);
+    GHAssertTrue(zync_original_file_status == 0, NULL);
+    
+    fclose(in_file);
+    fclose(download_file);
+    
+    int block_count = (zs->filelen + (zs->block_size - 1)) / (zs->block_size);
+    
+    download_file = fopen(downloadfile_url, "r+");
+    struct zync_state *zs2 = init_zync_state(0, 0, 0, NULL);
+    int read_success = read_zync_state(download_file, zs2);
+    GHAssertTrue(read_success == 0, NULL);
+    
+    GHAssertTrue(zs2->block_fill_count == block_count, NULL);
+    
+    free(zs2);
+    fclose(download_file);
+}
+
+- (void) test_zync_png_file
+{
+    NSString *nssourcefile_url = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"test_image_server.png"];
+    const char *sourcefile_url = [nssourcefile_url cStringUsingEncoding:NSASCIIStringEncoding];
+    FILE *in_file = fopen(sourcefile_url, "r");
+    
+    NSString *nsdownloadfile_url = [[[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] objectAtIndex:0] URLByAppendingPathComponent:@"test_image_server.png.download"] path];
+    const char *downloadfile_url = [nsdownloadfile_url cStringUsingEncoding:NSASCIIStringEncoding];
+    FILE *download_file = fopen(downloadfile_url, "w");
+    
+    struct zync_state *zs = init_zync_state(0, 0, 0, NULL);
+    int generate_success = generate_zync_state(in_file, zs, 2048);
+    GHAssertTrue(generate_success == 0, NULL);
+    
+    int write_success = init_download_file(download_file, zs);
+    GHAssertTrue(write_success == 0, NULL);
+    
+    fclose(in_file);
+    fflush(download_file);
+    fclose(download_file);
+    
+    in_file = fopen(sourcefile_url, "r");
+    download_file = fopen(downloadfile_url, "r+");
+    
+    int zync_original_file_status = zync_original_file(in_file, download_file, zs->filelen);
+    GHAssertTrue(zync_original_file_status == 0, NULL);
+    
+    fclose(in_file);
+    fclose(download_file);
+    
+    int block_count = (zs->filelen + (zs->block_size - 1)) / (zs->block_size);
+    
+    download_file = fopen(downloadfile_url, "r+");
+    struct zync_state *zs2 = init_zync_state(0, 0, 0, NULL);
+    int read_success = read_zync_state(download_file, zs2);
+    GHAssertTrue(read_success == 0, NULL);
+    
+    GHAssertTrue(zs2->block_fill_count == block_count, NULL);
+    
+    free(zs2);
+    fclose(download_file);
 }
 
 @end

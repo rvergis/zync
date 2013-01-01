@@ -8,23 +8,21 @@
 
 #include <stdio.h>
 #include "zync.h"
-#include <zlib.h>
-#include <CommonCrypto/CommonCrypto.h>
-#include <sys/stat.h>
+#include "adler32.h"
 
-int calc_adler32(unsigned char *buf, int len)
+uint32_t calc_adler32(unsigned char *buf,
+                      int len)
 {
-    uLong adler = 1;
-    uLong val = adler32(adler, buf, len);
-    return (int) val;
+    uint32_t val = rsync_adler32(buf, len);
+    return (uint32_t) val;
 }
 
-int calc_rolling_adler32(unsigned char current_ch, int len, unsigned char previous_ch, int rolling_adler)
+uint32_t calc_rolling_adler32(uint32_t rolling_adler,
+                              uint32_t len,
+                              unsigned char old_ch,
+                              unsigned char new_ch)
 {
-    uint32_t a = current_ch & 0xFF - previous_ch & 0xFF;
-    uint32_t b = a * len;
-    rolling_adler = rolling_adler + a + (b << 16);
-    
+    rolling_adler = rsync_rolling_adler32(rolling_adler, len, old_ch, new_ch);
     return rolling_adler;
 }
 

@@ -38,6 +38,8 @@
 		E4C46AE7168BBE9F00CE71BB /* mongoose.c in Sources */ = {isa = PBXBuildFile; fileRef = E4C46AE5168BBE9F00CE71BB /* mongoose.c */; };
 		E4C46AE8168BBE9F00CE71BB /* mongoose.c in Sources */ = {isa = PBXBuildFile; fileRef = E4C46AE5168BBE9F00CE71BB /* mongoose.c */; };
 		E4C46AE9168BBE9F00CE71BB /* mongoose.h in Headers */ = {isa = PBXBuildFile; fileRef = E4C46AE6168BBE9F00CE71BB /* mongoose.h */; };
+		E4E015AF16935A9300829BB0 /* TestZutil.m in Sources */ = {isa = PBXBuildFile; fileRef = E4E015AE16935A9300829BB0 /* TestZutil.m */; };
+		E4E015B31694227500829BB0 /* test_txt_file.txt in Resources */ = {isa = PBXBuildFile; fileRef = E4E015B21694227500829BB0 /* test_txt_file.txt */; };
 		E4EED2F0168E807B00BF1456 /* zutil.c in Sources */ = {isa = PBXBuildFile; fileRef = E4EED2EF168E807B00BF1456 /* zutil.c */; };
 		E4EED2F1168E807B00BF1456 /* zutil.c in Sources */ = {isa = PBXBuildFile; fileRef = E4EED2EF168E807B00BF1456 /* zutil.c */; };
 		E4EED2FD168E870300BF1456 /* adler32.c in Sources */ = {isa = PBXBuildFile; fileRef = E4EED2FC168E870300BF1456 /* adler32.c */; };
@@ -76,6 +78,10 @@
 		E4C46ADC168BBABD00CE71BB /* test_image_server.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test_image_server.png; path = test_files/test_image_server.png; sourceTree = "<group>"; };
 		E4C46AE5168BBE9F00CE71BB /* mongoose.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mongoose.c; path = test_files/mongoose.c; sourceTree = "<group>"; };
 		E4C46AE6168BBE9F00CE71BB /* mongoose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mongoose.h; path = test_files/mongoose.h; sourceTree = "<group>"; };
+		E4E015AE16935A9300829BB0 /* TestZutil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestZutil.m; sourceTree = "<group>"; };
+		E4E015B11693F35300829BB0 /* adler32.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = adler32.h; sourceTree = "<group>"; };
+		E4E015B21694227500829BB0 /* test_txt_file.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = test_txt_file.txt; path = test_files/test_txt_file.txt; sourceTree = "<group>"; };
+		E4E015B416955DA600829BB0 /* zync-internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "zync-internal.h"; sourceTree = "<group>"; };
 		E4EED2EF168E807B00BF1456 /* zutil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zutil.c; sourceTree = "<group>"; };
 		E4EED2FC168E870300BF1456 /* adler32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = adler32.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -202,6 +208,7 @@
 		E4C46AAC168A992100CE71BB /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				E4E015AE16935A9300829BB0 /* TestZutil.m */,
 				E4C46AAD168A992100CE71BB /* Supporting Files */,
 				E4C46ACB168A9A6A00CE71BB /* TestZync.m */,
 			);
@@ -238,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				E4C46AD5168AA53900CE71BB /* zync.h */,
+				E4E015B416955DA600829BB0 /* zync-internal.h */,
 			);
 			name = includes;
 			sourceTree = "<group>";
@@ -253,6 +261,7 @@
 		E4C46ADA168B91E600CE71BB /* test_files */ = {
 			isa = PBXGroup;
 			children = (
+				E4E015B21694227500829BB0 /* test_txt_file.txt */,
 				E4C2931F169014AC0099CF80 /* test_image_server.png.zync */,
 				E4C46ADC168BBABD00CE71BB /* test_image_server.png */,
 			);
@@ -297,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				E4EED2FC168E870300BF1456 /* adler32.c */,
+				E4E015B11693F35300829BB0 /* adler32.h */,
 			);
 			name = opensource;
 			sourceTree = "<group>";
@@ -431,6 +441,7 @@
 				E4C46ADE168BBABD00CE71BB /* test_image_client.png in Resources */,
 				E4C46AE0168BBABD00CE71BB /* test_image_server.png in Resources */,
 				E4C29320169014AC0099CF80 /* test_image_server.png.zync in Resources */,
+				E4E015B31694227500829BB0 /* test_txt_file.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +522,7 @@
 				E4C46AE8168BBE9F00CE71BB /* mongoose.c in Sources */,
 				E4EED2F1168E807B00BF1456 /* zutil.c in Sources */,
 				E4EED2FE168E870300BF1456 /* adler32.c in Sources */,
+				E4E015AF16935A9300829BB0 /* TestZutil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,6 +719,7 @@
 				E4C29312168FF92F0099CF80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E4C46A84168A984600CE71BB /* Build configuration list for PBXProject "zync" */ = {
 			isa = XCConfigurationList;

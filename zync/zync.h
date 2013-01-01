@@ -9,8 +9,10 @@
 #ifndef zync_zync_h
 #define zync_zync_h
 
-#include <sys/types.h>
-#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 #include "zutil.h"
 
 #define zync_rsum_t uint32_t
@@ -45,9 +47,11 @@ int zync_original_file(FILE *original_file,
 
 int update_download_file(FILE *download_file,
                          unsigned char *buf,
+                         struct zync_state *zs,
                          zync_block_index_t block_index);
 
-int finalize_download_file(FILE *in_file, FILE *out_file);
+int finalize_download_file(FILE *in_file,
+                           FILE *out_file);
 
 
 int write_zync_state(FILE *out_file,
@@ -65,8 +69,6 @@ int generate_zync_state(FILE *in_file,
                         struct zync_state *zs,
                         zync_block_size_t block_size);
 
-struct zync_state * generate_unfilled_zync_state(struct zync_state *zs);
-
 struct zync_block* add_zync_block(struct zync_state *zs,
                                   zync_block_index_t block_index,
                                   zync_block_index_t block_fill_id,
@@ -76,6 +78,10 @@ struct zync_block* add_zync_block(struct zync_state *zs,
 
 zync_block_index_t count_zync_blocks(struct zync_state *zs);
 
-struct zync_block * find_zync_block_by_index(struct zync_state *zs, zync_block_index_t block_index);
+struct zync_block * find_zync_block_by_index(struct zync_state *zs,
+                                             zync_block_index_t block_index);
+
+struct zync_block * find_unfilled_zync_block_by_rsum(struct zync_state *zs,
+                                                     zync_rsum_t rsum);
 
 #endif
